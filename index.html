@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzyBuy India</title>
+</head>
+<link rel="stylesheet" href="index.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+ <script src="https://kit.fontawesome.com/24838778b1.js" crossorigin="anonymous"></script>
+
+ <body>
+    <div class="sections d-flex align-items-center justify-content-end flex-column"> 
+        <ul class="sections-list d-flex align-items-center justify-content-around py-3" id="sectionsList">
+            <li class="subSections d-flex align-itrms-center justify-content-center flex-column"><i class="fa-solid fa-house set-active"></i>Home</li>
+            <li class="subSections d-flex align-itrms-center justify-content-center flex-column"><i class="fa-solid fa-bag-shopping"></i>Products</li>
+            <li class="subSections d-flex align-itrms-center justify-content-center flex-column"><i class="fa-solid fa-people-group"></i>About</li>
+            <li class="subSections d-flex align-itrms-center justify-content-center flex-column"><i class="fa-solid fa-envelope"></i>Contact</li>
+        </ul>
+    </div>
+
+
+    <nav class="navbar w-100 px-3 d-flex align-items-center justify-content-between flex-row">
+        <div>
+          <a class="navbar-brand" href="#">
+            <img src="assets/EZYBUY.png" id="logo" alt="EzyBuyIndia" class="d-inline-block align-text-top">
+          </a>
+        </div>
+
+        <div class="menu" onClick="toggle_section_view()">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+        </div>
+      </nav>     
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+<script>
+    const sections = document.querySelectorAll('.subSections');
+    const section_view = document.getElementById("sectionsList")
+
+    function toggle_section(){
+        sections.forEach((item)=>
+        item.childNodes[0].classList.remove('set-active')
+        );
+        this.childNodes[0].classList.add('set-active')
+    }
+
+    sections.forEach((item)=>
+    item.addEventListener('click',toggle_section));
+
+    function toggle_section_view(){
+        const line1 = document.getElementById("line1")
+        const line2 = document.getElementById("line2")
+        const line3 = document.getElementById("line3")
+        
+        if(section_view.style.opacity==0){
+            line3.style.display="none";
+            line1.style.transitionDuration = "1s";
+            line1.style.transform = "rotate(45deg)";
+            line1.style.marginTop = "12px";
+            line2.style.transitionDuration = "1s";
+            line2.style.transform = "rotate(-45deg)";
+            line2.style.marginTop = "-12px";
+            line2.classList.remove("mt-2");
+            section_view.style.opacity = 1
+        }
+        else if(section_view.style.opacity==1){
+            line3.style.display="block";
+            line1.style.transitionDuration = "1s";
+            line1.style.transform = "rotate(0deg)";
+            line1.style.marginTop = "0px";
+            line2.style.transitionDuration = "1s";
+            line2.style.transform = "rotate(0deg)";
+            line2.classList.add("mt-2");
+            line2.style.marginTop = "0px";
+            section_view.style.opacity = 0;
+        }
+    }
+
+
+</script>
+
+</html>
