@@ -45,6 +45,10 @@
     transition:0.5s ease-in-out;
 }
 
+.carousel-item img{
+    width:100rem;
+    height:56.5rem;
+}
 @media only screen and (max-width: 900px) {
     .sections-list {
         width:100%;
