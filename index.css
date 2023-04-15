@@ -2,28 +2,42 @@
     margin:0px;
     padding:0px;
 }
-
+body{
+    background-color: #fffbe3;
+}
+#logo{
+    width:70%;
+}
+nav{
+    background-color:#111d33;
+    padding:0.75rem;
+    box-shadow: 0 8px 6px -6px black;
+}
 
 .line{
     width:2.5rem;
     height:0.25rem;
-    background-color: black;
+    background-color: white;
     margin:0.5rem;
 }
 .menu{
     cursor:pointer;
+    z-index:2;
 }
 
 .sections{
     width:100vw;
     height:100vh;
     position:fixed;
+    z-index:2;
 }
+
 .sections-list{
-    background-color:rgba(0, 0, 0, 0.479);
+    background-color:rgba(0, 0, 0, 0.766);
     border-radius:1rem;
     width:70%;
     opacity:0;
+    color:white;
     transition:opacity 0.5s ease-in-out;
 }
 
@@ -38,19 +52,53 @@
 }
 
 .set-active{
-    background-color: black;
-    color:white;
+    background-color: white;
+    color:black;
     border-radius:50%;
     padding:0.8rem 0.2rem 0.8rem 0.2rem;
     transition:0.5s ease-in-out;
 }
 
+ul{
+    margin: 0px;
+    padding:0px;
+}
+
 .carousel-item img{
     width:100rem;
-    height:56.5rem;
+    height:50.5rem;
+    border-radius:0.5rem;
+
 }
+
+.carousel{
+    padding:2rem;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.prevNext{
+    z-index:2 !important;
+}
+
 @media only screen and (max-width: 900px) {
     .sections-list {
         width:100%;
+    }
+
+    .carousel{
+        padding:0.5rem;
+    }
+    .sections-list{
+        margin:0px;
+        padding:0.2rem;
+        border-radius:0px;
+    }
+    .carousel-item img{
+        width:100rem;
+        height:20.5rem;
+    }
+    .subSections{
+        font-size:1rem;
+        border-radius:0px;
     }
   }

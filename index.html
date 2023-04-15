@@ -22,7 +22,7 @@
     </div>
 
 
-    <nav class="navbar w-100 px-3 d-flex align-items-center justify-content-between flex-row">
+    <nav class="navbar w-100 d-flex align-items-center justify-content-between flex-row">
         <div>
           <a class="navbar-brand" href="#">
             <img src="assets/EZYBUY.png" id="logo" alt="EzyBuyIndia" class="d-inline-block align-text-top">
@@ -37,7 +37,7 @@
     </nav>     
 
     <div id="home">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade ">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="assets/meet1.JPG" class="d-block w-100" alt="Ezybuy at Dubai">
@@ -49,11 +49,11 @@
                 <img src="assets/meet3.JPG" class="d-block w-100" alt="Ezybuy at Dubai">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <button class="carousel-control-prev prevNext" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <button class="carousel-control-next prevNext" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -97,14 +97,13 @@
             line3.style.display="block";
             line1.style.transitionDuration = "1s";
             line1.style.transform = "rotate(0deg)";
-            line1.style.marginTop = "0px";
             line2.style.transitionDuration = "1s";
             line2.style.transform = "rotate(0deg)";
             line2.classList.add("mt-2");
             line2.style.marginTop = "0px";
             section_view.style.opacity = 0;
         }
-    }
+  }
 
 
 </script>
